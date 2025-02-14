@@ -1,4 +1,7 @@
 import { Heart } from 'lucide-react';
+import cat1 from '../assets/cat1.jpeg';
+import rose from '../assets/rose.jpeg';
+import cat2 from '../assets/cats.jpg';
 
 // Create an array of heart styles for variety
 const heartStyles = [
@@ -10,9 +13,9 @@ const heartStyles = [
 ];
 
 const roses = [
-  '/src/assets/cat1.jpeg',
-  '/src/assets/rose.jpeg',
-  '/src/assets/cats.jpg'
+  cat1,
+  rose,
+  cat2
 ];
 
 export const FloatingElements = () => {
