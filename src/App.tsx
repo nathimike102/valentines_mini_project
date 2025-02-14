@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { FloatingElements } from './components/FloatingElements';
 import { CelebrationScreen } from './components/CelebrationScreen';
 import { NeonHeart } from './components/NeonHeart';
+import song from './assets/Nokusingaperi.mp3';
 
 function App() {
   const [yesButtons, setYesButtons] = useState<Array<{ id: number; position: { x: number; y: number } }>>([]);
   const [showCelebration, setShowCelebration] = useState(false);
   const [finalYes, setFinalYes] = useState(false);
-  const [audio] = useState(new Audio('/src/assets/Nokusingaperi.mp3'));
+  const [audio] = useState(new Audio(song));
 
   useEffect(() => {
     audio.loop = true;
