@@ -10,9 +10,9 @@ const heartStyles = [
 ];
 
 const roses = [
-  './media/cat1.jpeg',
-  './media/rose.jpeg',
-  './media/cats.jpg'
+  '/src/assets/cat1.jpeg',
+  '/src/assets/rose.jpeg',
+  '/src/assets/cats.jpg'
 ];
 
 export const FloatingElements = () => {
