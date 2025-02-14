@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FloatingElements } from './components/FloatingElements';
 import { CelebrationScreen } from './components/CelebrationScreen';
 import { NeonHeart } from './components/NeonHeart';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const [yesButtons, setYesButtons] = useState<Array<{ id: number; position: { x: number; y: number } }>>([]);
