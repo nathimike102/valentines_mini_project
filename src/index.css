@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes float-message {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+    filter: brightness(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 4px rgba(255, 255, 255, 0.5),
+      0 0 8px rgba(255, 192, 203, 0.4),
+      0 0 12px rgba(255, 105, 180, 0.3);
+  }
+  50% {
+    text-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.7),
+      0 0 16px rgba(255, 192, 203, 0.6),
+      0 0 24px rgba(255, 105, 180, 0.5);
+  }
+}
+
+@keyframes drawHeart {
+  0% {
+    stroke-dashoffset: 1000;
+    filter: brightness(0.8);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    filter: brightness(0.8);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+.animate-float {
+  animation: float 20s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+.animate-pop-in {
+  animation: pop-in 0.5s ease-out forwards;
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
+
+.animate-float-message {
+  animation: float-message 6s linear forwards;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.neon-heart {
+  filter: 
+    drop-shadow(0 0 10px rgba(255, 0, 128, 0.8))
+    drop-shadow(0 0 20px rgba(255, 0, 128, 0.4))
+    drop-shadow(0 0 30px rgba(255, 0, 128, 0.2));
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawHeart 3s ease-in-out forwards infinite;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 8px rgba(255, 192, 203, 0.3);
+}
