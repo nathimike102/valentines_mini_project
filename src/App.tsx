@@ -110,6 +110,7 @@ function App() {
           </button>
         ))}
       </div>
+      <SpeedInsights />
     </div>
   );
 }
