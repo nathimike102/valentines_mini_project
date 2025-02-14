@@ -7,17 +7,15 @@ function App() {
   const [yesButtons, setYesButtons] = useState<Array<{ id: number; position: { x: number; y: number } }>>([]);
   const [showCelebration, setShowCelebration] = useState(false);
   const [finalYes, setFinalYes] = useState(false);
-  const [audio] = useState(new Audio('./media/Nokusingaperi.mp3'));
+  const [audio] = useState(new Audio('/media/Nokusingaperi.mp3'));
 
   useEffect(() => {
     audio.loop = true;
-    audio.play().catch(error => {
-      console.error("Audio playback failed:", error);
-    });
+    audio.volume = 1;
 
     return () => {
       audio.pause();
-      audio.currentTime = 10;
+      audio.currentTime = 0;
     };
   }, [audio]);
 
@@ -35,11 +33,15 @@ function App() {
       },
     };
 
+
     setYesButtons(prev => [...prev, newButton]);
   };
 
   const handleYesClick = () => {
     setShowCelebration(true);
+    audio.play().catch(error => {
+      console.error("Audio playback failed:", error);
+    });
   };
 
   if (showCelebration) {
